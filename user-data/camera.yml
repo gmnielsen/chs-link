@@ -6,8 +6,9 @@ pageInfo:
       path: >-
         https://docs.google.com/spreadsheets/d/1edh9FJLYf8H0sSYMuysUbBllolxUf-uNe3PulGi9kac/edit#gid=0
       target: newtab
-    - title: Documentation
-      path: https://dashy.to/docs
+    - title: Network map
+      path: >-
+        https://drive.google.com/open?id=17j3mZziU-5pajVKb0LnC6B2IdUn7G1QcmCPmz6grUMI
       target: newtab
 appConfig:
   theme: colorful
