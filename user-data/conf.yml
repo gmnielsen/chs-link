@@ -85,6 +85,10 @@ sections:
     items: []
     filteredItems: []
 pages:
+  - name: home
+    path: conf.yml
+    displayData:
+      hideForGuests: false
   - name: facilities
     path: camera.yml
     displayData:
