@@ -1,4 +1,105 @@
 pageInfo:
+  title: Switch - Facility - Camera
+  description: local links
+  navLinks:
+    - title: Internal addresses
+      path: >-
+        https://docs.google.com/spreadsheets/d/1edh9FJLYf8H0sSYMuysUbBllolxUf-uNe3PulGi9kac/edit#gid=0
+      target: newtab
+    - title: Network map
+      path: >-
+        https://drive.google.com/open?id=17j3mZziU-5pajVKb0LnC6B2IdUn7G1QcmCPmz6grUMI
+      target: newtab
+    - title: Floor plans
+      path: >-
+        https://drive.google.com/drive/folders/0B5WhVQd9acm_TWgyQkdEMDNjcjQ?usp=sharing
+      target: newtab
+    - title: Tech Wiki
+      path: >-
+        https://drive.google.com/drive/u/0/folders/0B5WhVQd9acm_Y2NjNjc4MDItMDdhMS00MGNjLTlmNmYtZDc0MzQ4YWNjODgw
+      target: newtab
+appConfig:
+  theme: colorful
+  layout: auto
+  iconSize: medium
+sections:
+  - name: all things Google
+    icon: fas fa-rocket
+    items:
+      - &ref_0
+        title: Admin
+        description: admin dashboard
+        icon: fas fa-user-tie
+        url: https://admin.google.com/Dashboard
+        target: newtab
+        id: 0_1635_admin
+      - &ref_1
+        title: Drive
+        description: files at google
+        url: https://drive.google.com
+        icon: favicon
+        id: 1_1635_drive
+      - &ref_2
+        title: Mail
+        description: email at google
+        icon: fal fa-envelope
+        url: https://mail.google.com
+        id: 2_1635_mail
+      - &ref_3
+        title: Vault
+        description: google's vault
+        icon: fas fa-shield
+        url: https://ediscovery.google.com/
+        id: 3_1635_vault
+      - &ref_4
+        title: Calendar
+        description: calendar
+        icon: fal fa-calendar
+        url: https://calendar.google.com
+        id: 4_1635_calendar
+      - &ref_5
+        title: Status
+        description: current google status
+        icon: favicon
+        url: http://www.google.com/appsstatus#hl=en&v=status
+        id: 5_1635_status
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+  - name: all things FACTS
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_6
+        title: test
+        description: test
+        icon: fa-solid fa-vault
+        id: 0_1399_test
+    filteredItems:
+      - *ref_6
+  - name: all things Blackbaud
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+    filteredItems: []
+pages:
+  - name: facilities
+    path: camera.yml
+    displayData:
+      hideForGuests: false
+pageInfo:
   title: Switches, Facilities, Cameras
   description: local links
   navLinks:
