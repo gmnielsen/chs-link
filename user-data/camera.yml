@@ -2,8 +2,9 @@ pageInfo:
   title: Switch - Facility - Camera
   description: internal links
   navLinks:
-    - title: GitHub
-      path: https://github.com/Lissy93/dashy
+    - title: Internal addresses
+      path: >-
+        https://docs.google.com/spreadsheets/d/1edh9FJLYf8H0sSYMuysUbBllolxUf-uNe3PulGi9kac/edit#gid=0
       target: newtab
     - title: Documentation
       path: https://dashy.to/docs
@@ -22,37 +23,37 @@ sections:
         url: http://10.1.1.5/
         target: newtab
         color: white
-        id: 0_874_admin
+        id: 0_874_server
       - &ref_1
         title: maintenance
         description: maintenance, C011
         url: http://10.1.1.12/
         color: red
-        id: 1_874_drive
+        id: 1_874_maintenance
       - &ref_2
         title: classroom
         description: classroom, C110
         url: http://10.1.1.11/
         color: red
-        id: 2_874_mail
+        id: 2_874_classroom
       - &ref_3
         title: upstairs
         description: telephone closet, L226
         url: http://10.1.1.25/
         color: yellow
-        id: 3_874_vault
+        id: 3_874_upstairs
       - &ref_4
         title: basement
         description: electric closet, L007
         url: http://10.1.1.26/
         color: yellow
-        id: 4_874_calendar
+        id: 4_874_basement
       - &ref_5
         title: boiler room
         description: boiler room, C046
         url: http://10.1.1.13/
         color: red
-        id: 5_874_status
+        id: 5_874_boilerroom
     filteredItems:
       - *ref_0
       - *ref_1
@@ -75,12 +76,35 @@ sections:
       hideForGuests: false
     items:
       - &ref_6
-        title: test
-        description: test
-        icon: fa-solid fa-vault
-        id: 0_1053_test
+        title: phones
+        description: phones
+        icon: fas fa-phone
+        url: http://10.1.0.5:8080/default.asp
+        id: 0_1053_phones
+      - &ref_7
+        title: HVAC
+        description: heating-cooling system
+        icon: fas fa-fan
+        url: https://10.1.50.10
+        id: 1_1053_hvac
+      - &ref_8
+        title: firewall
+        description: Meraki firewall
+        icon: fas fa-meteor
+        url: https://n11.meraki.com/login/dashboard_login?go=&sh=11
+        id: 2_1053_firewall
+      - &ref_9
+        title: extreme cloud
+        description: Extreme Networks
+        icon: fas fa-signal
+        url: https://va2.extremecloudiq.com/
+        id: 3_1053_extremecloud
     filteredItems:
       - *ref_6
+      - *ref_7
+      - *ref_8
+      - *ref_9
+    icon: fas fa-building
   - name: cameras
     displayData:
       sortBy: default
@@ -88,8 +112,32 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
-    items: []
-    filteredItems: []
+    items:
+      - &ref_10
+        title: guest bathrooms
+        description: Cheverus guest bathrooms
+        icon: fas fa-video
+        url: https://10.1.6.17/
+        color: red
+        id: 0_732_guestbathrooms
+      - &ref_11
+        title: boys 1st floor
+        description: boys bathroom first floor
+        icon: fas fa-video
+        url: https://10.1.6.25/
+        color: yellow
+        id: 1_732_boysstfloor
+      - &ref_12
+        title: boys 2nd floor
+        description: boys bathroom 2nd floor
+        icon: fas fa-video
+        url: https://10.1.6.19/
+        color: yellow
+        id: 2_732_boysndfloor
+    filteredItems:
+      - *ref_10
+      - *ref_11
+      - *ref_12
 pages:
   - name: home
     path: conf.yml
