@@ -1,45 +1,91 @@
----
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: Cheverus Tech Links
+  description: resources for the tech department
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+      target: newtab
+    - title: Documentation
+      path: https://dashy.to/docs
+      target: newtab
 appConfig:
   theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+  layout: auto
+  iconSize: medium
 sections:
-- name: all things Google
-  icon: fas fa-rocket
-  items:
-  - title: Admin
-    description: admin dashboard
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://admin.google.com/Dashboard
-    target: newtab
-  - title: Drive
-    description: files at google
-    url: https://drive.google.com
-    icon: favicon
-  - title: Mail
-    description: email at google
-    icon: far fa-book
-    url: https://mail.google.com
-  - title: Vault
-    description: google's vault
-    url: https://ediscovery.google.com/
-    icon: far fa-grin-hearts
-  - title: Calendar
-    description: calendar
-    url: https://calendar.google.com
-    icon: fas fa-wrench
-  - title: Status
-    description: current google status
-    url: http://www.google.com/appsstatus#hl=en&v=status
-    icon: far fa-hands-helping
+  - name: all things Google
+    icon: fas fa-rocket
+    items:
+      - &ref_0
+        title: Admin
+        description: admin dashboard
+        icon: fas fa-user-tie
+        url: https://admin.google.com/Dashboard
+        target: newtab
+        id: 0_1635_admin
+      - &ref_1
+        title: Drive
+        description: files at google
+        url: https://drive.google.com
+        icon: favicon
+        id: 1_1635_drive
+      - &ref_2
+        title: Mail
+        description: email at google
+        icon: fal fa-envelope
+        url: https://mail.google.com
+        id: 2_1635_mail
+      - &ref_3
+        title: Vault
+        description: google's vault
+        icon: fas fa-shield
+        url: https://ediscovery.google.com/
+        id: 3_1635_vault
+      - &ref_4
+        title: Calendar
+        description: calendar
+        icon: fal fa-calendar
+        url: https://calendar.google.com
+        id: 4_1635_calendar
+      - &ref_5
+        title: Status
+        description: current google status
+        icon: favicon
+        url: http://www.google.com/appsstatus#hl=en&v=status
+        id: 5_1635_status
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+  - name: all things FACTS
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_6
+        title: test
+        description: test
+        icon: fa-solid fa-vault
+        id: 0_1399_test
+    filteredItems:
+      - *ref_6
+  - name: all things Blackbaud
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+    filteredItems: []
+pages:
+  - name: facilities
+    path: camera.yml
+    displayData:
+      hideForGuests: false
